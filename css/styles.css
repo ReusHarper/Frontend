@@ -114,6 +114,7 @@
 	}
 	.btn-rosa:hover{
 		color: #fff;
+		cursor: pointer;
 	}
 	.btn-azul{
 		background-color: var(--azul);
@@ -121,6 +122,16 @@
 	}
 	.btn-azul:hover{
 		color: #fff;
+		cursor: pointer;
+	}
+	.btn-lavanda{
+		background-color: var(--lavanda);
+		color: var(--negro);
+	}
+	.btn-lavanda:hover{
+		background-color: var(--azul);
+		color: #fff;
+		cursor: pointer;
 	}
 	.sub{
 		text-decoration: underline;
@@ -147,7 +158,7 @@
 /* Navbar */
 
 	nav, main, footer{
-		border: black 2px solid;
+		/* border: black 2px solid; */
 		width: 100%;
 		padding: 13px 10px;
 	}
@@ -166,11 +177,11 @@
 /* Main */
 
 	main{
-		border: black 2px solid;
 		width: 100%;
 	}
 
 	main section{
+		margin: 25px 0;
 		flex-direction: column;
 		justify-content: center;
 	}
@@ -204,13 +215,18 @@
 	main section div .container-carousel{
 		width: 100%;
 		height: 50px;
-		display: none;
+		display: flex;
+		flex-direction: column;
+		align-content: center;
 	}
 
 	/* Cards */
 	.card-container{
 		min-width: 20rem;
 		padding: 0 50px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	.card{
@@ -236,12 +252,83 @@
 		justify-content: flex-end;
 	}
 
+	.iconos-cursos{
+		width: 80px;
+		height: 80px;
+	}
+
 	.carousel-control-prev-icon, .carousel-control-next-icon{
 		background-color: black;
 	}
 
+	/* Seccion de Talleres */
+	.container .row{
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.p-20{
+		padding: 20px;
+	}
+
+	.col-pub{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.col-pub img{
+		max-width: 300px;
+		max-height: 300px;
+	}
+
+	main section .contacto{
+		padding-top: 25px;
+		margin-bottom: 270px;
+		position: relative;
+		width: 360px;
+		height: 320px;
+		background-color: var(--lavanda);
+		display: flex;
+		flex-direction: column;
+	}
+
+	main section .contacto h2{
+		margin-top: 0;
+	}
+
+	main section .contacto div{
+		display: flex;
+		justify-content: center;
+	}
+
+	main section .contacto h2{
+		text-align: center;
+	}
+
+	main section .contacto .img-pub{
+		position: absolute;
+		top: 190px;
+	}
 
 /* Footer */
 	footer{
-		height: 160px;
+		padding: 35px;
+		width: 100%;
+		height: 360px;
+		background-color: var(--grisclaro);
+	}
+
+	footer div{
+		padding: 5px;
+		display: flex;
+		justify-content: space-around;
+	}
+
+	footer div img{
+		padding: 10px;
 	}

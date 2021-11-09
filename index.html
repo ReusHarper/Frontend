@@ -48,7 +48,7 @@
 				<img src="./img/icons/tecnologias/C.png" alt="Lenguaje C">
 			</div>
 			<h2>Aprende con nosotros</h2>
-			
+			<!-- Carrusel de Cursos -->
 			<div class="container-carousel">
 				<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
 					<div class="carousel-inner">
@@ -59,7 +59,7 @@
 								<!-- Card -->
 								<div class="card">
 									<div class="card-body">
-										<div><img src="./img/icons/tecnologias/java.png" alt="Java"></div>
+										<div><img class="iconos-cursos" src="./img/icons/tecnologias/java.png" alt="Java"></div>
 										<div><p>Java Básico</p></div>
 										<div>
 											<p class="p">Del 20 al 25 de agosto</p>
@@ -73,17 +73,25 @@
 								</div>
 							</div>
 						</div>
+						<!-- Contenido de Carrusel -->
 						<div class="carousel-item">
-							<div class="card" style="width: 18rem;">
-								<div class="card-body">
-									<div>
-										<p>JavaScript</p>
-									</div>
-									<p class="p">Del 20 al 25 de agosto</p>
-									<p class="p">14:00 - 16:00 hrs</p>
-									<div>
-										<img src="./img/icons/generales/carrito_compras.png" alt="Compras">
-										<img src="./img/icons/generales/menu_puntos.png" alt="Más opciones">
+							<!-- Contenedor de Card -->
+							<div class="card-container">
+								<!-- Card -->
+								<div class="card">
+									<div class="card-body">
+										<div><img class="iconos-cursos" src="./img/icons/tecnologias/js.png" alt="JavaScript"></div>
+										<div>
+											<p>JavaScript</p>
+										</div>
+										<div>
+											<p class="p">Del 20 al 25 de agosto</p>
+											<p class="p">14:00 - 16:00 hrs</p>
+										</div>
+										<div class="card-body__iconos">
+											<img src="./img/icons/generales/carrito_compras.png" alt="Compras">
+											<img src="./img/icons/generales/menu_puntos.png" alt="Más opciones">
+										</div>
 									</div>
 								</div>
 							</div>
@@ -92,21 +100,80 @@
 					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
 						data-bs-slide="prev">
 						<img src="./img/icons/generales/izquierda.png" alt="anterior">
-					</button>
+					</button>					
 					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
 						data-bs-slide="next">
 						<img src="./img/icons/generales/derecha.png" alt="siguiente">
 					</button>
 				</div>
 			</div>
-
+			<!-- Boton de cursos -->
 			<div class="btn sub">Ver todos los cursos</div>	
+		</section>
+
+		<!-- Talleres -->
+		<section>
+			<h2>Talleres gratuitos</h2>
+
+			<!-- Anuncios de talleres -->
+			<div class="container">
+				<div class="row">
+					<div class="col-pub col-lg-4 col-md-6 col-sm-12">
+						<!-- Publicidad: Taller de ejercicios C -->
+						<img src="./img/publicaciones/Taller_ejercicios_C.png" alt="Taller de ejercicios: Estructuras de control en C">
+						<!-- Boton de taller -->
+						<div>
+							<div class="btn btn-lavanda">Registrate aquí</div>
+						</div>
+					</div>
+					<div class="col-pub col-lg-4 col-md-6 col-sm-12">
+						<!-- Publicidad: Taller ¿Que computadora debo comprar? -->
+						<img src="./img/publicaciones/Taller_Que_Computadora_debo_comprar.png" alt="Taller: ¿Qué computadora debo comprar?">
+						<!-- Boton de taller -->
+						<div>
+							<div class="btn btn-lavanda">Registrate aquí</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Boton de talleres -->
+			<div class="btn sub">Ver todos los talleres</div>
+		</section>
+		<!-- Contacto -->
+		<section class="container-contacto">
+			<div class="contacto">
+				<h2>Necesitas ayuda</h2>
+				<div>
+					<p class="p">
+						De estudiantes para estudiantes
+					</p>
+				</div>
+				<div>
+					<!-- Boton de contacto -->
+					<div class="btn btn-azul">Conocer más</div>
+				</div>
+				<div class="img-pub">
+					<img src="./img/base/desarrollo_web.png" alt="">
+				</div>
+			</div>
 		</section>
 	</main>
 
 	<!-- Footer -->
 	<footer>
-		<div>Footer</div>
+		<div>
+			<img src="./img/icons/personales/UNAM_logobn1.png" alt="UNAM">
+			<img src="./img/icons/personales/FI_logobn1.png" alt="Facultad de Ingenieria">
+		</div>
+		<!-- Boton de email -->
+		<div class="btn-contacto">
+			<div class="btn sub">cursosproteco@gmail.com</div>
+		</div>
+		<!-- Boton de telefono -->
+		<div>
+			<div class="btn sub">Teléfono</div>
+		</div>
+		
 	</footer>
 	
 	<!-- JS -->
