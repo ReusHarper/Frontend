@@ -1,3 +1,262 @@
-@media only screen and (min-width: 600px){
+@media (min-width: 400px){
+    /* Elementos ocultos */
+	.dis-mov-500, .dis-mov-750, .dis-des-1020{
+		display: none;
+	}
+
+	/* Elementos visibles */
+	.dis-mov-400{
+		display: flex;
+	}
+
+    /* Seccion de presentacion */
+    .presentacion .item-1{
+        order: -1;
+	}
+
+    .presentacion .item-1 img{
+        max-height: 300px;
+    }
+
+    .contacto .item-1{
+        order: -1;
+    }
+
+	.presentacion .item-1 div img{
+        max-height: 300px;
+    }
+
+    .presentacion .item-2, .contacto .item-2{
+        order: 0;
+	}
+
+    .ico-proteco{
+		height: 50px;
+	}
+
+    .ico-menu{
+        max-height: 25px;
+    }
+}
+
+@media (min-width: 500px){
+    /* Elementos ocultos */
+    .dis-mov-750, .dis-des-1020{
+	    display: none;
+    }
+
+    /* Elementos visibles de version movil */
+    .dis-mov-400, .dis-mov-500{
+        display: flex;
+    }  
+
+    nav{
+       height: 120px; 
+    }
+
+    .ico-proteco, .ico-menu{
+        height: 60px;
+    }
+
+    main section h2{
+        padding: 20px 0;
+    }
+
+    /* Seccion de presentacion */
+    .presentacion .item-1, .contacto .item-1{
+        order: -1;
+	}
+
+    .presentacion .item-1 img{
+        max-height: 320px;
+    }
+
+    .presentacion .item-, .contacto .item-2{
+        order: 0;
+	}
+}
+
+@media (min-width: 750px){
+    /* Elementos ocultos */
+    .dis-des-1020{
+	    display: none;
+    }
+
+    /* Elementos visibles */
+    .dis-mov-400, .dis-mov-500, .dis-mov-750{
+        display: flex;
+    }
+
+    /* Navbar */
+	nav, main, footer{
+		/* border: black 2px solid; */
+		width: 100%;
+		padding: 26px 20px;
+	}
+
+    main{
+        padding: 26px 0;
+    }
+
+    nav{
+       height: 120px; 
+    }
+
+    .ico-proteco{
+        height: 80px;
+    }
+
+    .ico-menu{
+		height: 80px;
+	}
+
+    main section h2{
+        padding: 20px 0;
+    }
     
+    /* Seccion de presentacion */
+    .presentacion{
+		min-height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+	}
+
+    .presentacion .item-1, .contacto .item-1{
+        order: -1;
+    }
+
+    .presentacion .item-, .contacto .item-2{
+        order: 0;
+    }
+
+    .presentacion .item-1{
+        max-height: 400px;
+    }
+
+    /* Talleres */
+    .col-pub img{
+		width: 300px;
+		height: 300px;
+	}
+
+    /* Contacto */
+    .contacto{
+        display: flex;
+		flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .contacto .item-1{
+        margin-top: 40px;
+        align-items: flex-start;
+    }
+
+    .img-pub{
+		height: 300px;
+	}
+
+}
+
+@media (min-width: 1100px){
+    /* Elementos ocultos */
+    .dis-menu{
+        display: none;
+    }
+    
+    /* Elementos visibles */
+    .dis-mov-400, .dis-mov-500, .dis-mov-750, .dis-des-1020{
+	    display: flex;
+        justify-content: space-between;
+    }
+
+    nav, main, footer{
+		width: 100%;
+	}
+
+    nav, .container-tecnologias, footer{
+		padding: 26px 120px;
+	}
+
+    /* Navbar */
+    nav{
+       height: 140px;
+    }
+
+    .ico-proteco{
+        height: 100px;
+    }
+
+    .ico-menu{
+		height: 80px;
+	}
+
+    main section h2{
+        padding: 40px 0;
+    }
+
+    .presentacion .item-1, .contacto .item-2{
+        order: 0;
+    }
+
+    .presentacion .item-2, .contacto .item-1{
+        order: -1;
+    }
+
+    /* Presentacion */
+    .presentacion{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .presentacion .item-2 div, .presentacion .item-2 .container-btn{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .presentacion .item-2 div h1, .presentacion .item-2 div p{
+        text-align: left;
+    }
+
+    .container{
+       margin: 0;
+       padding: 0;
+    }
+
+    div.row.presentacion{
+        width: 100%;
+    }
+
+    img.img-principal{
+		min-height: 450px;
+	}
+
+    /* Talleres */
+    .col-pub img{
+		width: 400px;
+		height: 400px;
+	}
+
+    /* Contacto */
+    .contacto{
+        display: flex;
+		flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .contacto .item-1{
+        margin-top: 40px;
+        align-items: flex-start;
+    }
+
+    .img-pub{
+		height: 450px;
+	}
+}
+
+@media (min-width: 1220px){
+    img.img-principal{
+		min-height: 550px;
+	}
 }

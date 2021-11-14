@@ -65,14 +65,24 @@
        url('../fonts/mulish-v5-latin-900.svg#Mulish') format('svg'); /* Legacy iOS */
 }
 
+/* Configuraciones iniciales */
+	* { 
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
 /* Global */
 	body{
 		font-family: 'SpaceMonoRegular', sans-serif;
 		font-size: 100%;
+		min-height: 100vh;
 	}
+	
 	:root{
 		--rosa: #E01656;
 		--azul: #4266c7;
+		--amarillo: #DEC733;
 		--grisclaro: #eaeaea;
 		--lavanda: #BACDFF;
 		--lavanda-50: rgba(82, 128, 249, 0.5);
@@ -96,6 +106,10 @@
 	p{
 		font-size: 22px;
 	}
+
+	a{
+		text-decoration: none;
+	}
 	
 /* Botones */
 	.btn{
@@ -116,11 +130,21 @@
 		color: #fff;
 		cursor: pointer;
 	}
+	.btn-amarillo{
+		background-color: var(--amarillo);
+		color: var(--negro);
+	}
+	.btn-amarillo:hover{
+		background-color: var(--rosa);
+		color: #fff;
+		cursor: pointer;
+	}
 	.btn-azul{
 		background-color: var(--azul);
 		color: #fff;
 	}
 	.btn-azul:hover{
+		background-color: var(--rosa);
 		color: #fff;
 		cursor: pointer;
 	}
@@ -135,6 +159,23 @@
 	}
 	.sub{
 		text-decoration: underline;
+	}
+	.sub:hover{
+		background-color: var(--rosa);
+		color: #fff;
+	}
+	.container-btn, .container-tecnologias{
+		width: 100%;
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	.container-tecnologias{
+		flex-direction: row;
+	}
+
+	.ico-tecnologias{
+		padding: 0 5px;
 	}
 
 /* Forms */
@@ -155,6 +196,16 @@
 		margin-bottom: 1vh;
 	}
 
+	/* Elementos ocultos */
+	.dis-mov-500, .dis-mov-750, .dis-des-1020{
+		display: none;
+	}
+
+	/* Elementos visibles */
+	.dis-menu, .dis-mov-400{
+		display: flex;
+	}
+	
 /* Navbar */
 
 	nav, main, footer{
@@ -163,15 +214,63 @@
 		padding: 13px 10px;
 	}
 
+	main {
+		padding: 13px 0px;
+	}
+
 	nav {
 		height: 80px;
 		display: flex;
 		justify-content: space-between;
 	}
 
+	.nav-menu-extend{
+		min-width: 810px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	nav ul{
+		margin: 0;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		list-style: none;
+	}
+	
+	nav ul li{
+		margin: 20px;
+	}
+
+	nav ul li a{
+		display: block;
+		color: var(--negro);
+	}
+
+	nav ul li a:hover{
+		color: var(--azul);
+	}
+
+	nav ul li.active a{
+		color: var(--rosa);
+	}
+
 	nav div, main section{
 		display: flex;
 		align-items: center;
+	}
+
+	nav div img{
+		cursor: pointer;
+	}
+
+	.ico-proteco{
+		height: 20px;
+	}
+
+	.ico-menu{
+		height: 15px;
+		vertical-align: middle;
 	}
 
 /* Main */
@@ -181,9 +280,9 @@
 	}
 
 	main section{
-		margin: 25px 0;
+		padding: 0;
 		flex-direction: column;
-		justify-content: center;
+		/* justify-content: center; */
 	}
 
 	main section h2{
@@ -206,10 +305,39 @@
 		text-align: center;
 	}
 
+	.container{
+		width: 100%;
+		margin: 0;
+	}
+
+	.presentacion, .presentacion .item-1, .presentacion .item-2{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.presentacion .item-1{
+		order: -1;
+	}
+
+	.presentacion .item-1 img{
+        max-height: 300px;
+    }
+
+	.presentacion .item-2{
+		order: 0;
+		flex-direction: column;
+	}
+
 	/* Seccion de Cursos */
 	main section div img{
 		margin-left: 8px;
 		margin-right: 8px;
+		height: 75px;
+	}
+
+	.img-principal{
+		height: 500px;
 	}
 
 	main section div .container-carousel{
@@ -218,6 +346,10 @@
 		display: flex;
 		flex-direction: column;
 		align-content: center;
+	}
+
+	.card-body__iconos img{
+		height: 30px;
 	}
 
 	/* Cards */
@@ -265,7 +397,6 @@
 	.container .row{
 		margin: 0;
 		padding: 0;
-		
 	}
 
 	.p-20{
@@ -280,41 +411,49 @@
 	}
 
 	.col-pub img{
-		max-width: 300px;
-		max-height: 300px;
+		width: 300px;
+		height: 300px;
 	}
 
 	/* Seccion de contacto */
-	main section .contacto{
+	.contacto{
 		padding-top: 25px;
 		margin-bottom: 270px;
 		position: relative;
-		width: 360px;
-		height: 320px;
+		width: 100%;
+		height: 350px;
 		background-color: var(--lavanda);
+	}
+
+	.contacto .item-1{
+		height: 200px;
 		display: flex;
 		flex-direction: column;
 	}
 
-	main section .contacto h2{
+	.contacto h2{
 		margin-top: 0;
 	}
 
-	main section .contacto div{
+	.contacto div{
 		display: flex;
 		justify-content: center;
 	}
 
-	main section .contacto h2{
+	.contacto h2{
 		text-align: center;
 	}
 
-	main section .contacto .img-pub{
-		position: absolute;
+	.container-img-pub{
+		vertical-align: middle;
 		top: 190px;
 	}
 
-/* Footer */
+	.img-pub{
+		height: 300px;
+	}
+
+	/* Footer */
 	footer{
 		padding: 35px;
 		width: 100%;
@@ -331,3 +470,5 @@
 	footer div img{
 		padding: 10px;
 	}
+
+	
