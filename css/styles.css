@@ -280,14 +280,13 @@
 	}
 
 	main section{
+		margin: 24px 0;
 		padding: 0;
 		flex-direction: column;
 		/* justify-content: center; */
 	}
 
 	main section h2{
-		margin-top: 24px;
-		margin-bottom: 24px;
 		color: var(--rosa);
 	}
 
@@ -340,27 +339,77 @@
 		height: 500px;
 	}
 
-	main section div .container-carousel{
-		width: 100%;
-		height: 50px;
-		display: flex;
-		flex-direction: column;
-		align-content: center;
-	}
-
 	.card-body__iconos img{
 		height: 30px;
+		cursor: pointer;
 	}
 
-	/* Cards */
-	.card-container{
-		min-width: 20rem;
-		padding: 0 50px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+	/* Carousel */
+	.carousel__cursos{
+		width: 100%;
+		margin: 0 60px;
 	}
 
+	.carousel__contenedor {
+		position: relative;
+	}
+
+	.carousel__anterior,
+	.carousel__siguiente {
+		position: absolute;
+		display: block;
+		width: 30px;
+		height: 30px;
+		border: none;
+		top: calc(50% - 35px);
+		cursor: pointer;
+		line-height: 30px;
+		text-align: center;
+		background: none;
+		color: var(--azul);
+	}
+
+	.carousel__anterior:hover,
+	.carousel__siguiente:hover {
+		opacity: 100%;
+	}
+
+	.carousel__anterior {
+		left: -30px;
+	}
+
+	.carousel__siguiente {
+		right: -30px;
+	}
+
+	.carousel__lista {
+		overflow: hidden;
+	}
+
+	.carousel__elemento {
+		margin: 25px 50px;
+		text-align: center;
+	}
+
+	.carousel__indicadores .glider-dot {
+		display: block;
+		padding: 10px 0;
+		margin-bottom: 20px;
+		width: 30px;
+		height: 4px;
+		background: var(--lavanda);
+		opacity: .2;
+	}
+
+	.carousel__indicadores .glider-dot:hover {
+		opacity: .5;
+	}
+
+	.carousel__indicadores .glider-dot.active {
+		opacity: 1;
+	}
+
+	/* Cards */	
 	.card{
 		padding: 0 10px;
 		border-radius: 40px;
