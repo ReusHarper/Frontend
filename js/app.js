@@ -1,4 +1,5 @@
-window.addEventListener('load', function(){
+window.addEventListener('load', function(){	
+	// Carousel de seccion de cursos:
 	new Glider(document.querySelector('.carousel__lista'), {
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -23,4 +24,17 @@ window.addEventListener('load', function(){
 			}
 		]
 	});
+
+});
+
+addEventListener('DOMContentLoaded', () => {
+	// Menu desplegable:
+	const btn__menu = this.document.querySelector('.btn__menu');
+	if (btn__menu){
+		btn__menu.addEventListener('click', () => {
+			const menu__items = this.document.querySelector('.menu__items');
+			// Se muestra u oculta la clase 'show' dependiendo del caso
+			menu__items.classList.toggle('show');
+		});
+	}
 });

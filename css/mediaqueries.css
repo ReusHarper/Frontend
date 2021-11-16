@@ -262,15 +262,6 @@
         text-align: left;
     }
 
-    .container{
-       margin: 0;
-       padding: 0;
-    }
-
-    div.row.presentacion{
-        width: 100%;
-    }
-
     img.img-principal{
 		min-height: 450px;
 	}
@@ -326,6 +317,11 @@
 	}
 
     /* Presentacion */
+    .container{
+       margin: 0;
+       padding: 0;
+    }
+
     .presentacion .item-2 {
         justify-content: flex-start;
         align-items: flex-start;

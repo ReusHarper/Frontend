@@ -283,7 +283,6 @@
 		margin: 24px 0;
 		padding: 0;
 		flex-direction: column;
-		/* justify-content: center; */
 	}
 
 	main section h2{
@@ -306,8 +305,21 @@
 
 	.container{
 		width: 100%;
-		margin: 0;
+		padding: 0;
+        margin: 0;
 	}
+
+	.section-presentacion{
+		width: 100%;
+		margin: 0;
+		padding: 0 ;
+	}
+
+	div.row.presentacion{
+        margin: 0;
+        padding: 0 120px;
+        width: 100%;
+    }
 
 	.presentacion, .presentacion .item-1, .presentacion .item-2{
 		display: flex;
