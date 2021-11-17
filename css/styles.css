@@ -87,6 +87,11 @@
 		--lavanda: #BACDFF;
 		--lavanda-50: rgba(82, 128, 249, 0.5);
 		--negro: #000000;
+
+		--primary: #FFCE00;
+		--secondary: #FE4880;
+		--dark: #212121;
+		--light: #F3F3F3;
 	}
 
 /* Tipografía */
@@ -97,6 +102,7 @@
 
 	h1 span{
 		color: var(--azul);
+		font-weight: bold;
 	}
 
 	.p{
@@ -230,30 +236,34 @@
 		justify-content: space-between;
 	}
 
-	nav ul{
+	.menu__items{
+		/* width: auto; */
+		top: 0;
 		margin: 0;
 		padding: 0;
-		display: flex;
-		align-items: center;
 		list-style: none;
 	}
 	
-	nav ul li{
+	.menu__items li{
 		margin: 20px;
 	}
 
-	nav ul li a{
+	.menu__items li a{
 		display: block;
 		color: var(--negro);
 	}
 
-	nav ul li a:hover{
+	.menu__items li a:hover{
 		color: var(--azul);
 	}
 
-	nav ul li.active a{
+	.menu__items li.active a{
 		color: var(--rosa);
 	}
+
+	.menu__items.show{
+        top: 120px;
+    }
 
 	nav div, main section{
 		display: flex;
@@ -272,6 +282,94 @@
 		height: 15px;
 		vertical-align: middle;
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Remove border from toggler */
+.navbar-toggler {
+    border: 0 !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+}
+
+/* Lines of the Toggler */
+.toggler-icon{
+    width: 30px;
+    height: 3px;
+    background-color: var(--rosa);
+    display: block;
+    transition: all 0.2s;
+}
+
+/* Adds Space between the lines */
+.middle-bar{
+    margin: 5px auto;
+}
+
+/* State when navbar is opened (START) */
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+/* State when navbar is opened (END) */
+
+/* State when navbar is collapsed (START) */
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+/* State when navbar is collapsed (END) */
+
+/* Color of Toggler when collapsed */
+.navbar-toggler.collapsed .toggler-icon {
+    background-color: var(--negro);
+}
+
+
+
+
+
+
 
 /* Main */
 
@@ -312,7 +410,14 @@
 	.section-presentacion{
 		width: 100%;
 		margin: 0;
-		padding: 0 ;
+		padding: 0;
+	}
+
+	.section-cursos{
+		width: 100%;
+		margin: 24px 0;
+		padding: 0;
+		display: static;
 	}
 
 	div.row.presentacion{
@@ -351,7 +456,7 @@
 		height: 500px;
 	}
 
-	.card-body__iconos img{
+	.card__face__iconos img{
 		height: 30px;
 		cursor: pointer;
 	}
@@ -364,6 +469,7 @@
 
 	.carousel__contenedor {
 		position: relative;
+		display: flex;
 	}
 
 	.carousel__anterior,
@@ -379,6 +485,12 @@
 		text-align: center;
 		background: none;
 		color: var(--azul);
+
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		overflow: hidden;
+		border-radius: 16px;
+		box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
 	}
 
 	.carousel__anterior:hover,
@@ -396,11 +508,6 @@
 
 	.carousel__lista {
 		overflow: hidden;
-	}
-
-	.carousel__elemento {
-		margin: 25px 50px;
-		text-align: center;
 	}
 
 	.carousel__indicadores .glider-dot {
@@ -422,14 +529,53 @@
 	}
 
 	/* Cards */	
-	.card{
-		padding: 0 10px;
+	.card.glider-slide{
 		border-radius: 40px;
-		filter: drop-shadow(0 0 10px var(--lavanda-50));
+		border: none;
+		display: flex;
+		align-items: center;
 	}
 
 	.card-body{
+		width: 350px;
+		height: 500px;
 		padding: 0;
+		margin: 0;
+		transition: transform 1s;
+  		transform-style: preserve-3d;
+  		position: relative;
+	}
+
+	.card-body.is-flipped {
+  		transform: rotateY(180deg);
+	}
+
+	.card__face{
+		position: absolute;
+		margin: 0;
+		padding: 0 5% !important;
+		width: 100%;
+		height: 100%;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		overflow: hidden;
+		border-radius: 16px;
+		box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);		
+	}
+
+	.card__face--front, .card__face--back {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.card__face.card__face--back {
+		padding-left: 20px!important;
+		/* flex-direction: row; */
+		/* justify-content: flex-start!important;
+		align-content: flex-start!important; */
+		align-items: flex-start!important;
+		transform: rotateY(180deg);
 	}
 
 	.card-body div {
@@ -440,19 +586,45 @@
 		align-items: center;
 	}
 
-	.card-body .card-body__iconos{
+	.card-body .card__face__iconos{
+		width: 100%;
 		flex-direction: row;
 		justify-content: flex-end;
 	}
 
+	.card__text{
+		height: 30%;
+		display: flex;
+		align-items: flex-start!important;
+	}
+
+	.card__text > .p > span{
+		font-weight: bold;
+	}
+
+	.card__face__iconos > .btn.sub{
+		padding: 2% 2% !important;
+	}
+
+	.card__btns{
+		display: flex;
+		flex-direction: row!important;
+		border: 1px solid black;
+	}
+
 	.iconos-cursos{
-		width: 80px;
+		width: 160px;
 		height: 80px;
 	}
 
 	.carousel-control-prev-icon, .carousel-control-next-icon{
 		background-color: black;
 	}
+
+	/* div.glider-track{
+		display: inline-block;
+	} */
+
 
 	/* Seccion de Talleres */
 	.container .row{

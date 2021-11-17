@@ -10,13 +10,13 @@ window.addEventListener('load', function(){
 		},
 		responsive: [
 			{
-			  breakpoint: 1000,
+			  breakpoint: 1200,
 			  settings: {
 				slidesToShow: 2,
 				slidesToScroll: 2
 			  }
 			},{
-			  breakpoint: 1300,
+			  breakpoint: 1500,
 			  settings: {
 				slidesToShow: 3,
 				slidesToScroll: 3
@@ -33,8 +33,24 @@ addEventListener('DOMContentLoaded', () => {
 	if (btn__menu){
 		btn__menu.addEventListener('click', () => {
 			const menu__items = this.document.querySelector('.menu__items');
+			const nav_extend = this.document.querySelector('.nav-menu-extend ');
 			// Se muestra u oculta la clase 'show' dependiendo del caso
 			menu__items.classList.toggle('show');
+			nav_extend.items.classList.toggle('dis-des-1020');
 		});
 	}
 });
+
+// Movimiento frontal y trasero de card
+function flipCards(){
+	const btns = document.querySelectorAll(".card__flip");
+
+	btns.forEach((btn) => {
+		btn.addEventListener('click', e => {
+			// console.log(e.target.id);
+			btn.parentNode.parentNode.parentNode.classList.toggle('is-flipped');
+		});
+	});
+}
+
+flipCards();

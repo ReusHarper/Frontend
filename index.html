@@ -14,10 +14,10 @@
 </head>
 <body>
 	<!-- Navbar -->
-	<nav>
+	<!-- <nav>
 		<div><img class="ico-proteco" src="./img/icons/personales/PROTECO_logocolor1.png" alt="PROTECO"></div>
 		<div class="nav-menu-extend dis-des-1020">
-			<ul class="nav_list">
+			<ul class="menu__items">
 				<li class="active"><a href="">Inicio</a></li>
 				<li><a href="#">Cursos</a></li>
 				<li><a href="#">Talleres</a></li>
@@ -28,8 +28,29 @@
 				<div class="btn btn-amarillo">Iniciar sesión</div>
 			</div>
 		</div>
-		<!-- Boton de menu -->
-		<div class="dis-menu"><img class="ico-menu dis-menu" src="./img/icons/generales/menu.png" alt="menu"></div>
+		<div class="dis-menu btn__menu"><img class="ico-menu dis-menu" src="./img/icons/generales/menu.png" alt="menu"></div>
+	</nav> -->
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+			<img class="ico-proteco" src="./img/icons/personales/PROTECO_logocolor1.png" alt="PROTECO">
+			<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="toggler-icon top-bar"></span>
+				<span class="toggler-icon middle-bar"></span>
+				<span class="toggler-icon bottom-bar"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="active"><a href="">Inicio</a></li>
+					<li><a href="#">Cursos</a></li>
+					<li><a href="#">Talleres</a></li>
+					<li><a href="#">Asesorias</a></li>
+					<li><a href="#">Nosotros</a></li>
+				</ul>
+			</div>
+		</div>
 	</nav>
 
 	<!-- Main -->
@@ -65,7 +86,7 @@
 		</section>
 
 		<!-- Cursos -->
-		<section>
+		<section class="section-cursos">
 			<!-- Iconos de tecnologías ofrecidas al publico -->
 			<div class="container-tecnologias">
 				<img class="dis-mov-400 ico-tecnologias" src="./img/icons/tecnologias/arduino.png" alt="Arduino">
@@ -79,82 +100,173 @@
 				<img class="dis-des-1020 ico-tecnologias" src="./img/icons/tecnologias/vuejs.png" alt="Vuejs">
 			</div>
 			<h2>Aprende con nosotros</h2>
-
-			
 			<div class="carousel__cursos">
 				<div class="carousel__contenedor">
 					<button aria-label="Anterior" class="carousel__anterior">
 						<i class="fas fa-chevron-left"></i>
 					</button>
-			
-					<div class="carousel__lista">
+					<div class="carousel__lista">					
 						<!-- Card -->
-						<div class="card carousel__elemento">
+						<div class="card">
 							<div class="card-body">
-								<div><img class="iconos-cursos" src="./img/icons/tecnologias/java.png" alt="Java"></div>
-								<div>
-									<p>Java Básico</p>
+								<div class="card__face card__face--front">
+									<div><img class="iconos-cursos" src="./img/icons/tecnologias/java.png" alt="Java"></div>
+									<div>
+										<p>Java Básico</p>
+									</div>
+									<div>
+										<p class="p">Del 20 al 25 de agosto</p>
+										<p class="p">12:00 - 14:00 hrs</p>
+									</div>
+									<div class="card__face__iconos">
+										<img src="./img/icons/generales/carrito_compras.png" alt="Compras">
+										<img id="cf1" class="card__flip" src="./img/icons/generales/menu_puntos.png" alt="Más opciones">
+									</div>
 								</div>
-								<div>
-									<p class="p">Del 20 al 25 de agosto</p>
-									<p class="p">12:00 - 14:00 hrs</p>
-								</div>
-								<div class="card-body__iconos">
-									<img src="./img/icons/generales/carrito_compras.png" alt="Compras">
-									<img src="./img/icons/generales/menu_puntos.png" alt="Más opciones">
+								<div class="card__face card__face--back">
+									<div class="card__text">
+										<p class="p"><span>Fecha:</span> 20 al 25 de agosto</p>
+										<p class="p"><span>Horario:</span> 12:00 - 14:00 hrs</p>
+										<p class="p"><span>Antecedentes:</span> Ninguno</p>
+										<p class="p"><span>Equipo:</span> Computadora propia</p>
+										<p class="p"><span>Días:</span> Lunes a Viernes</p>
+									</div>
+						
+									<div class="card__text">
+										<p class="p"><span>Precios:</span></p>
+										<p class="p"><span>Comunidad UNAM:</span> $300</p>
+										<p class="p"><span>Alumnos externos:</span> $600</p>
+										<p class="p"><span>Público general:</span> $800</p>
+									</div>
+						
+									<div class="card__face__iconos">
+										<div class="btn sub" href="#">Consultar temario</div>
+										<img id="cf2" class="card__flip" src="./img/icons/generales/menu_puntos.png" alt="Más opciones">
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="card carousel__elemento">
+					
+						<div class="card">
 							<div class="card-body">
-								<div><img class="iconos-cursos" src="./img/icons/tecnologias/js.png" alt="JavaScript"></div>
-								<div>
-									<p>JavaScript</p>
+								<div class="card__face card__face--front">
+									<div><img class="iconos-cursos" src="./img/icons/tecnologias/java.png" alt="Java"></div>
+									<div>
+										<p>Java Básico</p>
+									</div>
+									<div>
+										<p class="p">Del 20 al 25 de agosto</p>
+										<p class="p">12:00 - 14:00 hrs</p>
+									</div>
+									<div class="card__face__iconos">
+										<img src="./img/icons/generales/carrito_compras.png" alt="Compras">
+										<img id="cf1" class="card__flip" src="./img/icons/generales/menu_puntos.png" alt="Más opciones">
+									</div>
 								</div>
-								<div>
-									<p class="p">Del 20 al 25 de agosto</p>
-									<p class="p">12:00 - 14:00 hrs</p>
-								</div>
-								<div class="card-body__iconos">
-									<img src="./img/icons/generales/carrito_compras.png" alt="Compras">
-									<img src="./img/icons/generales/menu_puntos.png" alt="Más opciones">
+								<div class="card__face card__face--back">
+									<div class="card__text">
+										<p class="p"><span>Fecha:</span> 20 al 25 de agosto</p>
+										<p class="p"><span>Horario:</span> 12:00 - 14:00 hrs</p>
+										<p class="p"><span>Antecedentes:</span> Ninguno</p>
+										<p class="p"><span>Equipo:</span> Computadora propia</p>
+										<p class="p"><span>Días:</span> Lunes a Viernes</p>
+									</div>
+						
+									<div class="card__text">
+										<p class="p"><span>Precios:</span></p>
+										<p class="p"><span>Comunidad UNAM:</span> $300</p>
+										<p class="p"><span>Alumnos externos:</span> $600</p>
+										<p class="p"><span>Público general:</span> $800</p>
+									</div>
+						
+									<div class="card__face__iconos">
+										<div class="btn sub" href="#">Consultar temario</div>
+										<img id="cf2" class="card__flip" src="./img/icons/generales/menu_puntos.png" alt="Más opciones">
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="card carousel__elemento">
+					
+						<div class="card">
 							<div class="card-body">
-								<div><img class="iconos-cursos" src="./img/icons/tecnologias/cpp.png" alt="C++"></div>
-								<div>
-									<p>C++</p>
+								<div class="card__face card__face--front">
+									<div><img class="iconos-cursos" src="./img/icons/tecnologias/java.png" alt="Java"></div>
+									<div>
+										<p>Java Básico</p>
+									</div>
+									<div>
+										<p class="p">Del 20 al 25 de agosto</p>
+										<p class="p">12:00 - 14:00 hrs</p>
+									</div>
+									<div class="card__face__iconos">
+										<img src="./img/icons/generales/carrito_compras.png" alt="Compras">
+										<img id="cf1" class="card__flip" src="./img/icons/generales/menu_puntos.png" alt="Más opciones">
+									</div>
 								</div>
-								<div>
-									<p class="p">Del 20 al 25 de agosto</p>
-									<p class="p">12:00 - 14:00 hrs</p>
-								</div>
-								<div class="card-body__iconos">
-									<img src="./img/icons/generales/carrito_compras.png" alt="Compras">
-									<img src="./img/icons/generales/menu_puntos.png" alt="Más opciones">
+								<div class="card__face card__face--back">
+									<div class="card__text">
+										<p class="p"><span>Fecha:</span> 20 al 25 de agosto</p>
+										<p class="p"><span>Horario:</span> 12:00 - 14:00 hrs</p>
+										<p class="p"><span>Antecedentes:</span> Ninguno</p>
+										<p class="p"><span>Equipo:</span> Computadora propia</p>
+										<p class="p"><span>Días:</span> Lunes a Viernes</p>
+									</div>
+						
+									<div class="card__text">
+										<p class="p"><span>Precios:</span></p>
+										<p class="p"><span>Comunidad UNAM:</span> $300</p>
+										<p class="p"><span>Alumnos externos:</span> $600</p>
+										<p class="p"><span>Público general:</span> $800</p>
+									</div>
+						
+									<div class="card__face__iconos">
+										<div class="btn sub" href="#">Consultar temario</div>
+										<img id="cf2" class="card__flip" src="./img/icons/generales/menu_puntos.png" alt="Más opciones">
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="card carousel__elemento">
+					
+						<div class="card">
 							<div class="card-body">
-								<div><img class="iconos-cursos" src="./img/icons/tecnologias/arduino.png" alt="Arduino"></div>
-								<div>
-									<p>Arduino</p>
+								<div class="card__face card__face--front">
+									<div><img class="iconos-cursos" src="./img/icons/tecnologias/java.png" alt="Java"></div>
+									<div>
+										<p>Java Básico</p>
+									</div>
+									<div>
+										<p class="p">Del 20 al 25 de agosto</p>
+										<p class="p">12:00 - 14:00 hrs</p>
+									</div>
+									<div class="card__face__iconos">
+										<img src="./img/icons/generales/carrito_compras.png" alt="Compras">
+										<img id="cf1" class="card__flip" src="./img/icons/generales/menu_puntos.png" alt="Más opciones">
+									</div>
 								</div>
-								<div>
-									<p class="p">Del 20 al 25 de agosto</p>
-									<p class="p">12:00 - 14:00 hrs</p>
-								</div>
-								<div class="card-body__iconos">
-									<img src="./img/icons/generales/carrito_compras.png" alt="Compras">
-									<img src="./img/icons/generales/menu_puntos.png" alt="Más opciones">
+								<div class="card__face card__face--back">
+									<div class="card__text">
+										<p class="p"><span>Fecha:</span> 20 al 25 de agosto</p>
+										<p class="p"><span>Horario:</span> 12:00 - 14:00 hrs</p>
+										<p class="p"><span>Antecedentes:</span> Ninguno</p>
+										<p class="p"><span>Equipo:</span> Computadora propia</p>
+										<p class="p"><span>Días:</span> Lunes a Viernes</p>
+									</div>
+					
+									<div class="card__text">
+										<p class="p"><span>Precios:</span></p>
+										<p class="p"><span>Comunidad UNAM:</span> $300</p>
+										<p class="p"><span>Alumnos externos:</span> $600</p>
+										<p class="p"><span>Público general:</span> $800</p>
+									</div>
+					
+									<div class="card__face__iconos">
+										<div class="btn sub" href="#">Consultar temario</div>
+										<img id="cf2" class="card__flip" src="./img/icons/generales/menu_puntos.png" alt="Más opciones">
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-			
+					</div>			
 					<button aria-label="Siguiente" class="carousel__siguiente">
 						<i class="fas fa-chevron-right"></i>
 					</button>
@@ -235,9 +347,9 @@
 	</footer>
 	
 	<!-- JS -->
-	<script src="js/bootstrap.js"></script>
+	<script src="./js/bootstrap.js"></script>
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	<script src="./js/glider.min.js"></script>
-	<script src="js/app.js"></script>
+	<script src="./js/app.js"></script>
 </body>
 </html>

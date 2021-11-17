@@ -9,6 +9,25 @@
 		display: flex;
 	}
 
+    /* Navbar */
+    /* .menu__items{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 120px;
+        background-color: blueviolet;
+        text-align: center;
+        transition: all .4s;
+        display: flex;
+        flex-direction: column;
+    } */
+
+    /* .menu__items > li > a :hover{
+        display: block;
+        width: 100%;
+        color: var(--lavanda);
+    } */
+
     /* Seccion de presentacion */
     .presentacion .item-1{
         order: -1;
@@ -43,7 +62,7 @@
         padding: 0 120px;
     }
 
-    .carousel__elemento {
+    .card {
 		margin: 25px 40px;
 		text-align: center;
 	}
@@ -90,7 +109,7 @@
         padding: 0 120px;
     }
 
-    .carousel__elemento {
+    .card {
 		margin: 25px 35px;
 		text-align: center;
 	}
@@ -107,7 +126,6 @@
         display: flex;
     }
 
-    /* Navbar */
 	nav, main, footer{
 		/* border: black 2px solid; */
 		width: 100%;
@@ -122,6 +140,7 @@
         padding: 26px 0;
     }
 
+    /* Navbar */
     nav{
        height: 120px; 
     }
@@ -159,12 +178,12 @@
     }
 
     /* Carousel */
-    .carousel__elemento {
+    .card {
 		margin: 25px 30px;
 		text-align: center;
 	}
 
-    .card-body__iconos img{
+    .card__face__iconos img{
         width: auto;
 		height: 50px;
 	}
@@ -199,6 +218,11 @@
 }
 
 @media (min-width: 1100px){
+     /* Fonts */
+    h1{
+        font-size: 40px;
+    }
+
     /* Elementos ocultos */
     .dis-menu{
         display: none;
@@ -235,6 +259,18 @@
 		height: 80px;
 	}
 
+    .menu__items{
+        position: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		list-style: none;
+	}
+
+
+    
+
     main section h2{
         padding: 40px 0;
     }
@@ -267,12 +303,13 @@
 	}
 
     /* Carousel */
-    .carousel__elemento {
+    .card {
+        padding: 0;
 		margin: 25px 30px;
 		text-align: center;
 	}
 
-    .card-body__iconos img{
+    .card__face__iconos img{
         width: auto;
 		height: 50px;
 	}
@@ -306,12 +343,18 @@
 }
 
 @media (min-width: 1220px){
+     /* Fonts */
+    h1{
+        font-size: 50px;
+    }
+
     img.img-principal{
 		min-height: 550px;
 	}
 
     /* Carousel */
-    .carousel__elemento {
+    .card {
+        padding: 0;
 		margin: 25px 50px;
 		text-align: center;
 	}
