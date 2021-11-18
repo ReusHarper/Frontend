@@ -13,45 +13,37 @@
 	<link rel="stylesheet" href="./css/mediaqueries.css">
 </head>
 <body>
-	<!-- Navbar -->
-	<!-- <nav>
-		<div><img class="ico-proteco" src="./img/icons/personales/PROTECO_logocolor1.png" alt="PROTECO"></div>
-		<div class="nav-menu-extend dis-des-1020">
-			<ul class="menu__items">
-				<li class="active"><a href="">Inicio</a></li>
-				<li><a href="#">Cursos</a></li>
-				<li><a href="#">Talleres</a></li>
-				<li><a href="#">Asesorias</a></li>
-				<li><a href="#">Nosotros</a></li>
-			</ul>
-			<div>
-				<div class="btn btn-amarillo">Iniciar sesión</div>
-			</div>
-		</div>
-		<div class="dis-menu btn__menu"><img class="ico-menu dis-menu" src="./img/icons/generales/menu.png" alt="menu"></div>
-	</nav> -->
-
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<div class="container-fluid">
-			<img class="ico-proteco" src="./img/icons/personales/PROTECO_logocolor1.png" alt="PROTECO">
-			<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="toggler-icon top-bar"></span>
-				<span class="toggler-icon middle-bar"></span>
-				<span class="toggler-icon bottom-bar"></span>
+	<!-- Header -->
+	<header class="header">
+		<!-- Navbar -->
+		<nav class="nav">
+			<!-- <a href="#" class="logo nav-link">Logo</a> -->
+			<div class="nav-ico"><img class="logo ico-proteco" src="./img/icons/personales/PROTECO_logocolor1.png" alt="PROTECO"></div>
+			<button class="nav-toggle" aria-label="Abrir menú">
+				<i class="fas fa-bars"></i>
 			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="active"><a href="">Inicio</a></li>
-					<li><a href="#">Cursos</a></li>
-					<li><a href="#">Talleres</a></li>
-					<li><a href="#">Asesorias</a></li>
-					<li><a href="#">Nosotros</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+			<ul class="nav-menu">
+				<li class="nav-menu-item">
+					<a href="#" class="nav-menu-link nav-link nav-menu-link_active">Inicio</a>
+				</li>
+				<li class="nav-menu-item">
+					<a href="#" class="nav-menu-link nav-link">Cursos</a>
+				</li>
+				<li class="nav-menu-item">
+					<a href="#" class="nav-menu-link nav-link">Talleres</a>
+				</li>
+				<li class="nav-menu-item">
+					<a href="#" class="nav-menu-link nav-link">Asesorías</a>
+				</li>
+				<li class="nav-menu-item">
+					<a href="#" class="nav-menu-link nav-link">Nosotros</a>
+				</li>
+				<div>
+					<div class="btn btn-amarillo">Iniciar sesión</div>
+				</div>
+			</ul>
+		</nav>
+	</header>
 
 	<!-- Main -->
 	<main>
@@ -273,9 +265,7 @@
 				</div>
 			
 				<div role="tablist" class="carousel__indicadores"></div>
-			</div>
-
-			
+			</div>		
 			<!-- Boton de cursos -->
 			<div class="btn sub">Ver todos los cursos</div>	
 		</section>
@@ -283,7 +273,6 @@
 		<!-- Talleres -->
 		<section>
 			<h2>Talleres gratuitos</h2>
-
 			<!-- Anuncios de talleres -->
 			<div class="container">
 				<div class="row">
@@ -308,6 +297,7 @@
 			<!-- Boton de talleres -->
 			<div class="btn sub">Ver todos los talleres</div>
 		</section>
+		
 		<!-- Contacto -->
 		<section class="container-contacto">
 			<div class="contacto">

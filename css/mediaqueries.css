@@ -1,4 +1,4 @@
-@media (min-width: 400px){
+@media (max-width: 400px){
     /* Elementos ocultos */
 	.dis-mov-500, .dis-mov-750, .dis-des-1020{
 		display: none;
@@ -9,24 +9,10 @@
 		display: flex;
 	}
 
-    /* Navbar */
-    /* .menu__items{
-        position: absolute;
-        width: 100%;
-        left: 0;
-        top: 120px;
-        background-color: blueviolet;
-        text-align: center;
-        transition: all .4s;
-        display: flex;
-        flex-direction: column;
-    } */
-
-    /* .menu__items > li > a :hover{
-        display: block;
-        width: 100%;
-        color: var(--lavanda);
-    } */
+    /* Header */
+    .header{
+        padding: 10px!important;
+    }
 
     /* Seccion de presentacion */
     .presentacion .item-1{
@@ -53,10 +39,6 @@
 		height: 50px;
 	}
 
-    .ico-menu{
-        max-height: 25px;
-    }
-
     /* Carousel */
     .carousel__cursos{
         padding: 0 120px;
@@ -68,7 +50,7 @@
 	}
 }
 
-@media (min-width: 500px){
+@media (min-width: 500px) and (max-width: 749px){
     /* Elementos ocultos */
     .dis-mov-750, .dis-des-1020{
 	    display: none;
@@ -79,12 +61,16 @@
         display: flex;
     }
 
+    .header{
+        padding: 20px!important;
+    }
+
     nav{
        height: 120px; 
     }
 
-    .ico-proteco, .ico-menu{
-        height: 60px;
+    .ico-proteco{
+        height: 80px;
     }
 
     main section h2{
@@ -115,7 +101,7 @@
 	}
 }
 
-@media (min-width: 750px){
+@media (min-width: 750px) and (max-width: 1099px){
     /* Elementos ocultos */
     .dis-des-1020{
 	    display: none;
@@ -124,6 +110,10 @@
     /* Elementos visibles */
     .dis-mov-400, .dis-mov-500, .dis-mov-750{
         display: flex;
+    }
+
+    .header{
+        padding: 40px!important;
     }
 
 	nav, main, footer{
@@ -148,10 +138,6 @@
     .ico-proteco{
         height: 80px;
     }
-
-    .ico-menu{
-		height: 80px;
-	}
 
     main section h2{
         padding: 20px 0;
@@ -217,7 +203,83 @@
 
 }
 
-@media (min-width: 1100px){
+@media (max-width: 1099px){
+    /* Header */
+    .header{
+        padding: 50px 100px!important;
+        height: 180px;
+        position: fixed;
+        z-index: 1;
+        background-color: var(--azul);
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        background-color: var(--lavanda);
+        position: fixed;
+        top: 180px;
+        width: 100%;
+        padding: 20px 0;
+        height: 100vh;
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    .nav-menu-item {
+        line-height: 70px;
+    }
+
+    .nav-menu-link{
+        color: var(--negro);
+    }
+
+    .nav-menu-link:hover,
+    .nav-menu-link_active {
+        background: none;
+        color: var(--rosa);
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+
+    .nav-toggle:focus:not(:focus-visible) {
+        outline: none;
+    }
+
+    main{
+        position: relative;
+        top: 180px;
+    }
+}
+
+@media(min-width: 1100px){
+    /* Orden entre elementos */
+    .presentacion .item-1, .contacto .item-2{
+        order: 0;
+    }
+
+    .presentacion .item-2, .contacto .item-1{
+        order: -1;
+    }
+
+    .header{
+        padding: 10px 80px!important;
+    }
+
+    .nav-ico{
+        display: flex;
+        align-items: center;
+    }  
+}
+
+@media (min-width: 1100px) {
      /* Fonts */
     h1{
         font-size: 40px;
@@ -238,7 +300,11 @@
 		width: 100%;
 	}
 
-    nav, .container-tecnologias, footer{
+    .header{
+        height: 140px;
+    }
+
+    .container-tecnologias, footer{
 		padding: 26px 120px;
 	}
 
@@ -255,32 +321,8 @@
         height: 100px;
     }
 
-    .ico-menu{
-		height: 80px;
-	}
-
-    .menu__items{
-        position: none;
-		margin: 0;
-		padding: 0;
-		display: flex;
-		align-items: center;
-		list-style: none;
-	}
-
-
-    
-
     main section h2{
         padding: 40px 0;
-    }
-
-    .presentacion .item-1, .contacto .item-2{
-        order: 0;
-    }
-
-    .presentacion .item-2, .contacto .item-1{
-        order: -1;
     }
 
     /* Presentacion */
@@ -342,7 +384,7 @@
 	}
 }
 
-@media (min-width: 1220px){
+@media (min-width: 1220px) {
      /* Fonts */
     h1{
         font-size: 50px;
@@ -351,6 +393,10 @@
     img.img-principal{
 		min-height: 550px;
 	}
+    
+    .ico-proteco{
+        height: 90px;
+    }
 
     /* Carousel */
     .card {
