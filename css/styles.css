@@ -1,3 +1,7 @@
+html, body {
+  min-height: 100%;
+}
+
 /* Fonts */
 @font-face {
   font-family: 'SpaceMonoRegular';
@@ -85,13 +89,8 @@
 		--amarillo: #DEC733;
 		--grisclaro: #eaeaea;
 		--lavanda: #BACDFF;
-		--lavanda-50: rgba(82, 128, 249, 0.5);
 		--negro: #000000;
 
-		--primary: #FFCE00;
-		--secondary: #FE4880;
-		--dark: #212121;
-		--light: #F3F3F3;
 	}
 
 /* Tipografía */
@@ -202,12 +201,38 @@
 		margin-bottom: 1vh;
 	}
 
-	/* Elementos ocultos */
+/* Colores titulos */
+  .ti_reg{
+    color: var(--rosa);
+  }
+  .ti_log{
+	color: var(--azul);
+  }
+
+/* Colores enlaces */
+  .a_reg{
+    color: var(--rosa);
+  }
+  .a_log{
+    color: var(--azul);
+  }
+/* margenes */
+  .main_log_reg{
+    margin-top: 7rem;
+    display: block;
+  }
+/* body login/register */
+  .body_log{
+    background: rgb(186,205,255);
+    background: linear-gradient(90deg, rgba(186,205,255,1) 39%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 100%);
+  }
+
+/* Elementos ocultos */
 	.dis-mov-500, .dis-mov-750, .dis-des-1020{
 		display: none;
 	}
 
-	/* Elementos visibles */
+/* Elementos visibles */
 	.dis-menu, .dis-mov-400{
 		display: flex;
 	}
@@ -220,69 +245,10 @@
 		padding: 13px 0;
 	}
 
-
-	/* nav {
-		height: 80px;
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.nav-menu-extend{
-		min-width: 810px;
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.menu__items{
-		top: 0;
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-	
-	.menu__items li{
-		margin: 20px;
-	}
-
-	.menu__items li a{
-		display: block;
-		color: var(--negro);
-	}
-
-	.menu__items li a:hover{
-		color: var(--azul);
-	}
-
-	.menu__items li.active a{
-		color: var(--rosa);
-	}
-
-	.menu__items.show{
-        top: 120px;
-    } */
-
-	/* nav div, main section{
-		display: flex;
-		align-items: center;
-	} */
-	
 	main section{
 		display: flex;
 		align-items: center;
 	}
-
-	/* nav div img{
-		cursor: pointer;
-	}
-
-	.ico-proteco{
-		height: 20px;
-	}
-
-	.ico-menu{
-		height: 15px;
-		vertical-align: middle;
-	} */
 
 	.header {
 		height: 140px;
@@ -350,17 +316,8 @@
 		padding: 0 20px;
 		line-height: 60px;
 		cursor: pointer;
-
 		display: none;
 	}
-
-
-
-
-
-
-
-
 
 /* Main */
 
@@ -563,9 +520,6 @@
 
 	.card__face.card__face--back {
 		padding-left: 20px!important;
-		/* flex-direction: row; */
-		/* justify-content: flex-start!important;
-		align-content: flex-start!important; */
 		align-items: flex-start!important;
 		transform: rotateY(180deg);
 	}
@@ -612,11 +566,6 @@
 	.carousel-control-prev-icon, .carousel-control-next-icon{
 		background-color: black;
 	}
-
-	/* div.glider-track{
-		display: inline-block;
-	} */
-
 
 	/* Seccion de Talleres */
 	.container .row{
